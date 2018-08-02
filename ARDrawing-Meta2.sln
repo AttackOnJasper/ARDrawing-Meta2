@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARDrawing-Meta2", "ARDrawing-Meta2.csproj", "{816E1839-6CD8-B66C-2073-1EC61344D4DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARDrawing-Meta2.Editor", "ARDrawing-Meta2.Editor.csproj", "{CB1B824E-14E4-FAB9-F59B-93716C374A29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{816E1839-6CD8-B66C-2073-1EC61344D4DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{816E1839-6CD8-B66C-2073-1EC61344D4DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{816E1839-6CD8-B66C-2073-1EC61344D4DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{816E1839-6CD8-B66C-2073-1EC61344D4DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB1B824E-14E4-FAB9-F59B-93716C374A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB1B824E-14E4-FAB9-F59B-93716C374A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB1B824E-14E4-FAB9-F59B-93716C374A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB1B824E-14E4-FAB9-F59B-93716C374A29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
