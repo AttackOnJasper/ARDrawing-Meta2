@@ -18,11 +18,12 @@ public class DrawingManager : MonoBehaviour {
         if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began) || Input.GetMouseButtonDown(0))
         {
             Debug.Log("Start drawing");
-            float dist = canvas.transform.position.z;
-            double relativeX = Input.mousePosition.x / Screen.width - 0.5;
+            double relativeX = (Input.mousePosition.x / Screen.width - 0.5) * 0.25;
             double relativeZ = Input.mousePosition.y / Screen.height - 0.5;
-            startPos = new Vector3((float)relativeX, this.transform.position.y, (float)relativeZ);
-            thisTrail = Instantiate(drawingPrefab, startPos, Quaternion.identity);
+            startPos = new Vector3((float)relativeX, gameObject.transform.position.y, (float)relativeZ);
+            thisTrail = Instantiate(drawingPrefab, startPos, Quaternion.identity) as GameObject;
+            thisTrail.transform.parent = gameObject.transform;
+            thisTrail.transform.eulerAngles = new Vector3(0,0,0);
         }
     }
 }
