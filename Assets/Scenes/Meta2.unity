@@ -501,7 +501,7 @@ LineRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 942631420}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -509,7 +509,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 25f2bd16c9296324c83fe925a6d3a370, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -915,7 +915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a75d9a8f64c463344ad49b01f8aebe9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drawingPrefab: {fileID: 1216112568880536, guid: 1180ac8d6c9aa534a9369836940a1630,
+  drawingPrefab: {fileID: 1330921608186028, guid: 1180ac8d6c9aa534a9369836940a1630,
     type: 2}
   canvas: {fileID: 942631420}
 --- !u!4 &1967659758

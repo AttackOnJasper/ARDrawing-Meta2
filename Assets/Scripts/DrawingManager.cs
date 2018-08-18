@@ -5,7 +5,7 @@ using UnityEngine;
 public class DrawingManager : MonoBehaviour {
     public GameObject drawingPrefab;
     public GameObject canvas;
-    GameObject thisTrail;
+    GameObject newTrail;
     Vector3 startPos;
 
     // Use this for initialization
@@ -18,8 +18,8 @@ public class DrawingManager : MonoBehaviour {
         if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began) || Input.GetMouseButtonDown(0))
         {
             Debug.Log("Start drawing");
-            double relativeX = Input.mousePosition.x / Screen.width - 0.5;
-            double relativeZ = Input.mousePosition.y / Screen.height - 0.5;
+            double relativeX = (Input.mousePosition.x / Screen.width - 0.5) * -10;
+            double relativeZ = (Input.mousePosition.y / Screen.height - 0.5) * -10;
             startPos = new Vector3((float)relativeX, 0, (float)relativeZ);
 
             /*
@@ -36,14 +36,14 @@ public class DrawingManager : MonoBehaviour {
                 // use the hitPoint to aim your cannon
             }
             */
-            thisTrail = Instantiate(drawingPrefab, startPos, Quaternion.identity) as GameObject;
-            thisTrail.transform.parent = gameObject.transform;
+            newTrail = Instantiate(drawingPrefab, startPos, Quaternion.identity) as GameObject;
+            newTrail.transform.parent = canvas.transform;
+            newTrail.transform.localScale = new Vector3(1, 1, 1);
+            newTrail.transform.localPosition = new Vector3(0, 0, 0);
+            newTrail.transform.localRotation = Quaternion.identity;
 
-            var localTrailRenderer = canvas.AddComponent<TrailRenderer_Local>();
-            localTrailRenderer.objToFollow = thisTrail.transform;
-            localTrailRenderer.limitTrailLength = false;
-            localTrailRenderer.maxPositions = 1000;
-            localTrailRenderer.distIncrement = 0.1F;
+            Transform dotTransform = newTrail.gameObject.transform.GetChild(0);
+            dotTransform.localPosition = startPos;
         }
     }
 }

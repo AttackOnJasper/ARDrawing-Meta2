@@ -35,9 +35,9 @@ public class TrailRenderer_Local : MonoBehaviour
     void Reset()
     {
         // Wipe out any old positions in the LineRenderer
-        //myLine.numPositions = 0;
+        myLine.numPositions = 0;
         // Then set the first position to our object's current local position
-        AddPoint(objToFollow.localPosition);
+        AddPoint(objToFollow.transform.localPosition);
     }
 
     // Add a new point to the line renderer on demand
